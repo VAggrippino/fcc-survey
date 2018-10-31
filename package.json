@@ -1,0 +1,26 @@
+{
+  "name": "fcc-survey",
+  "version": "1.0.0",
+  "description": "freeCodeCamp Responsive Web Design Projects - Build a Survey Form",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "node-sass": "^4.9.4",
+    "stylelint": "^9.7.1",
+    "stylelint-config-recommended-scss": "^3.2.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VAggrippino/fcc-survey.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VAggrippino/fcc-survey/issues"
+  },
+  "homepage": "https://github.com/VAggrippino/fcc-survey#readme"
+}
