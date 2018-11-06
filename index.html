@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Survey - freeCodeCamp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  <script src="main.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1><span class="company-name">freeCodeCamp</span> Customer Satisfaction Survey</h1>
+    <h2>Let us know how we can improve <span class="company-name">freeCodeCamp</span></h2>
+    <form action="#" id="survey" method="post">
+      <div class="block name required">
+        <label for="name" id="name-label">Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your name">
+      </div>
+
+      <div class="block email required">
+        <label for="email" id="email-label">Email Address</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+      </div>
+
+      <div class="block age required">
+        <label for="number" id="number-label">Age</label>
+        <input type="number" id="number" name="number" required min="6" max="99" placeholder="18">
+      </div>
+
+      <div class="block role required">
+        <label for="role">What best describes your current role?</label>
+        <select name="role" id="role" required>
+          <option value="">-- Please Choose One --</option>
+          <option value="student">Student</option>
+          <option value="employee">Employee</option>
+          <option value="manager">Manager</option>
+          <option value="executive">Executive</option>
+          <option value="unidentified">Prefer Not to Say</option>
+          <option value="other">Other</option>
+        </select>
+        <input type="text" id="role-other" name="role-other" placeholder="Your role">
+      </div>
+
+      <div class="block recommend required">
+        <label>Would you recommend <span class="company-name">freeCodeCamp</span> to a friend?</label>
+        <ul id="recommend">
+          <li>
+            <input type="radio" name="recommend" id="recommend-yes" value="yes">
+            <label for="recommend-yes">Yes</label>
+          </li>
+          <li>
+            <input type="radio" name="recommend" id="recommend-no" value="no">
+            <label for="recommend-no">No</label>
+          </li>
+          <li>
+            <input type="radio" name="recommend" id="recommend-maybe" value="maybe">
+            <label for="recommend-maybe">Maybe</label>
+          </li>
+        </ul>
+      </div>
+
+      <div class="block likes">
+        <label for="like">What do you like most about <span class="company-name">freeCodeCamp</span>?</label>
+        <select name="like" id="like">
+          <option value="">-- Please Select One --</option>
+          <option value="challenges">Challenges</option>
+          <option value="projects">Projects</option>
+          <option value="community">Community</option>
+          <option value="opensource">Open Source Commitment</option>
+        </select>
+      </div>
+
+      <div class="block improvements">
+        <label>What should be improved in the future? (Check all that apply)</label>
+        <ul id="improvements">
+          <li>
+            <input type="checkbox" value="frontend" id="improve-frontend">
+            <label for="improve-frontend">Frontend Projects</label>
+          </li>
+          <li>
+            <input type="checkbox" value="backend" id="improve-backend">
+            <label for="improve-backend">Backend Projects</label>
+          </li>
+          <li>
+            <input type="checkbox" value="dataviz" id="improve-dataviz">
+            <label for="improve-">Data Visualization</label>
+          </li>
+          <li>
+            <input type="checkbox" value="challenges" id="improve-challenges">
+            <label for="improve-challenges">Coding Challenges</label>
+          </li>
+          <li>
+            <input type="checkbox" value="opensource" id="improve-opensource">
+            <label for="improve-opensource">Open Source Involvement</label>
+          </li>
+          <li>
+            <input type="checkbox" value="livechat" id="improve-livechat">
+            <label for="improve-liechat">Live Help Chat</label>
+          </li>
+          <li>
+            <input type="checkbox" value="videos" id="improve-videos">
+            <label for="improve-videos">Video Tutorials</label>
+          </li>
+          <li>
+            <input type="checkbox" value="meetups" id="improve-meetups">
+            <label for="improve-meetups">Community Meetups</label>
+          </li>
+          <li>
+            <input type="checkbox" value="wiki" id="improve-wiki">
+            <label for="improve-wiki">Community Wiki</label>
+          </li>
+          <li>
+            <input type="checkbox" value="forum" id="improve-forum">
+            <label for="improve-forum">Community Forum</label>
+          </li>
+          <li>
+            <input type="checkbox" value="courses" id="improve-courses">
+            <label for="improve-courses">Additional Coursess</label>
+          </li>
+          <li>
+            <input type="checkbox" value="other" id="improve-other">
+            <input type="text" id="improve-other-text" placeholder="Something Else">
+          </li>
+        </ul>
+      </div>
+      <div class="block comment">
+        <label for="comment">Do you have any comments or suggestions?</label>
+        <textarea id="comment"></textarea>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
