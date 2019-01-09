@@ -10,28 +10,30 @@
 </head>
 <body>
   <div class="container">
-    <h1><span class="company-name">freeCodeCamp</span> Customer Satisfaction Survey</h1>
-    <h2>Let us know how we can improve <span class="company-name">freeCodeCamp</span></h2>
-    <form action="#" id="survey" method="post">
-      <div class="block name required">
+    <h1 id="title"><span class="company-name">freeCodeCamp</span> Customer Satisfaction Survey</h1>
+    <p id="description">
+      Let us know how we can improve <span class="company-name">freeCodeCamp</span>
+    </p>
+    <form action="#" id="survey-form" method="post">
+      <div class="survey-form--field required">
         <label for="name" id="name-label">Name</label>
         <input type="text" id="name" name="name" required placeholder="Enter your name">
       </div>
 
-      <div class="block email required">
+      <div class="survey-form--field required">
         <label for="email" id="email-label">Email Address</label>
         <input type="email" id="email" name="email" required placeholder="Enter your email address">
       </div>
 
       <div class="block age required">
         <label for="number" id="number-label">Age</label>
-        <input type="number" id="number" name="number" required min="6" max="99" placeholder="18">
+        <input type="number" name="number" id="number" min="6" max="122" required placeholder="Enter your age">
       </div>
 
-      <div class="block role required">
-        <label for="role">What best describes your current role?</label>
-        <select name="role" id="role" required>
-          <option value="">-- Please Choose One --</option>
+      <div class="survey-form--field">
+        <label for="dropdown">What best describes your current role?</label>
+        <select name="role" id="dropdown" required>
+          <option value="" selected disabled>-- Please Select One --</option>
           <option value="student">Student</option>
           <option value="employee">Employee</option>
           <option value="manager">Manager</option>
@@ -42,7 +44,7 @@
         <input type="text" id="role-other" name="role-other" placeholder="Your role">
       </div>
 
-      <div class="block recommend required">
+      <div class="survey-form--field">
         <label>Would you recommend <span class="company-name">freeCodeCamp</span> to a friend?</label>
         <ul id="recommend">
           <li>
@@ -60,10 +62,10 @@
         </ul>
       </div>
 
-      <div class="block likes">
+      <div class="survey-form--radios">
         <label for="like">What do you like most about <span class="company-name">freeCodeCamp</span>?</label>
         <select name="like" id="like">
-          <option value="">-- Please Select One --</option>
+          <option value="" selected disabled>-- Please Select One --</option>
           <option value="challenges">Challenges</option>
           <option value="projects">Projects</option>
           <option value="community">Community</option>
@@ -71,7 +73,7 @@
         </select>
       </div>
 
-      <div class="block improvements">
+      <div class="survey-form--checkboxes">
         <label>What should be improved in the future? (Check all that apply)</label>
         <ul id="improvements">
           <li>
@@ -124,11 +126,15 @@
           </li>
         </ul>
       </div>
-      <div class="block comment">
+      <div class="survey-form--field">
         <label for="comment">Do you have any comments or suggestions?</label>
         <textarea id="comment"></textarea>
       </div>
+      <div class="survey-form--buttons">
+        <button type="submit" id="submit">Submit</button>
+      </div>
     </form>
   </div>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
