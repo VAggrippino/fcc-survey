@@ -5,140 +5,143 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Survey - freeCodeCamp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-  <script src="main.js"></script>
-  <script defer
-    src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"
-    integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
+  <link rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
     crossorigin="anonymous"
-  ></script>
+  >
+  <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-  <header>
-    <h1 id="title"><span class="company-name">freeCodeCamp</span> Customer Satisfaction Survey</h1>
-    <p id="description">
-      Let us know how we can improve <span class="company-name">freeCodeCamp</span>
-    </p>
+  <header class="header">
+    <div class="header--logo"><i class="fab fa-free-code-camp"></i></div>
+    <h1 id="title" class="header--title">Customer Satisfaction Survey</h1>
   </header>
   <main>
-    <form action="#" id="survey-form" method="post">
-      <div class="survey-form--field required">
-        <label for="name" id="name-label">Name</label>
-        <input type="text" id="name" name="name" required placeholder="Enter your name">
-      </div>
+    <p id="description" class="header--description">
+      Let us know how we can improve <span class="company-name">freeCodeCamp</span>.
+    </p>
+    <form action="#" id="survey-form" class="survey-form" method="post" onsubmit="return false">
+      <fieldset>
+        <legend>About You</legend>
+        <div class="survey-form--field required">
+          <label for="name" id="name-label" class="field-label">Name</label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
 
-      <div class="survey-form--field required">
-        <label for="email" id="email-label">Email Address</label>
-        <input type="email" id="email" name="email" required placeholder="Enter your email address">
-      </div>
+        <div class="survey-form--field required">
+          <label for="email" id="email-label" class="field-label">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="Enter your email address">
+        </div>
 
-      <div class="block age required">
-        <label for="number" id="number-label">Age</label>
-        <input type="number" name="number" id="number" min="6" max="122" required placeholder="Enter your age">
-      </div>
+        <div class="survey-form--field required">
+          <label for="number" id="number-label" class="field-label">Age</label>
+          <input type="number" name="number" id="number" min="6" max="122" required placeholder="Enter your age">
+        </div>
 
-      <div class="survey-form--field">
-        <label for="dropdown">What best describes your current role?</label>
-        <select name="role" id="dropdown" required>
-          <option value="" selected disabled>-- Please Select One --</option>
-          <option value="student">Student</option>
-          <option value="employee">Employee</option>
-          <option value="manager">Manager</option>
-          <option value="executive">Executive</option>
-          <option value="unidentified">Prefer Not to Say</option>
-          <option value="other">Other</option>
-        </select>
-        <input type="text" id="role-other" name="role-other" placeholder="Your role">
-      </div>
+        <div class="survey-form--field required">
+          <label for="dropdown" class="field-label">What best describes your current role?</label>
+          <select name="role" id="dropdown" class="survey-form--field--role-select" required>
+            <option value="" selected disabled>-- Please Select One --</option>
+            <option value="student">Student</option>
+            <option value="employee">Employee</option>
+            <option value="manager">Manager</option>
+            <option value="executive">Executive</option>
+            <option value="unidentified">Prefer Not to Say</option>
+          </select>
+        </div>
+      </fieldset>
 
-      <div class="survey-form--field">
-        <label>Would you recommend <span class="company-name">freeCodeCamp</span> to a friend?</label>
-        <ul id="recommend">
-          <li>
+      <fieldset>
+        <legend>About Us</legend>
+        <div class="survey-form--field">
+          <label class="field-label">Would you recommend <span class="company-name">freeCodeCamp</span> to a friend?</label>
+          <div class="radio">
             <input type="radio" name="recommend" id="recommend-yes" value="yes">
-            <label for="recommend-yes">Yes</label>
-          </li>
-          <li>
+            <label for="recommend-yes" class="item-label">Yes</label>
+          </div>
+          <div class="radio">
             <input type="radio" name="recommend" id="recommend-no" value="no">
-            <label for="recommend-no">No</label>
-          </li>
-          <li>
+            <label for="recommend-no" class="item-label">No</label>
+          </div>
+          <div class="radio">
             <input type="radio" name="recommend" id="recommend-maybe" value="maybe">
-            <label for="recommend-maybe">Maybe</label>
-          </li>
-        </ul>
-      </div>
+            <label for="recommend-maybe" class="item-label">Maybe</label>
+          </div>
+        </div>
 
-      <div class="survey-form--radios">
-        <label for="like">What do you like most about <span class="company-name">freeCodeCamp</span>?</label>
-        <select name="like" id="like">
-          <option value="" selected disabled>-- Please Select One --</option>
-          <option value="challenges">Challenges</option>
-          <option value="projects">Projects</option>
-          <option value="community">Community</option>
-          <option value="opensource">Open Source Commitment</option>
-        </select>
-      </div>
+        <div class="survey-form--field">
+          <label for="like" class="field-label">What do you like most about <span class="company-name">freeCodeCamp</span>?</label>
+          <select name="like" id="like">
+            <option value="" selected disabled>-- Please Select One --</option>
+            <option value="challenges">Challenges</option>
+            <option value="projects">Projects</option>
+            <option value="community">Community</option>
+            <option value="opensource">Open Source Commitment</option>
+          </select>
+        </div>
 
-      <div class="survey-form--checkboxes">
-        <label>What should be improved in the future? (Check all that apply)</label>
-        <ul id="improvements">
-          <li>
+        <div class="survey-form--field">
+          <label class="field-label">What should be improved in the future? (Check all that apply)</label>
+          <div class="checkbox">
             <input type="checkbox" value="frontend" id="improve-frontend">
-            <label for="improve-frontend">Frontend Projects</label>
-          </li>
-          <li>
+            <label for="improve-frontend" class="item-label">Frontend Projects</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="backend" id="improve-backend">
-            <label for="improve-backend">Backend Projects</label>
-          </li>
-          <li>
+            <label for="improve-backend" class="item-label">Backend Projects</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="dataviz" id="improve-dataviz">
-            <label for="improve-">Data Visualization</label>
-          </li>
-          <li>
+            <label for="improve-dataviz" class="item-label">Data Visualization</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="challenges" id="improve-challenges">
-            <label for="improve-challenges">Coding Challenges</label>
-          </li>
-          <li>
+            <label for="improve-challenges" class="item-label">Coding Challenges</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="opensource" id="improve-opensource">
-            <label for="improve-opensource">Open Source Involvement</label>
-          </li>
-          <li>
+            <label for="improve-opensource" class="item-label">Open Source Involvement</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="livechat" id="improve-livechat">
-            <label for="improve-liechat">Live Help Chat</label>
-          </li>
-          <li>
+            <label for="improve-liechat" class="item-label">Live Help Chat</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="videos" id="improve-videos">
-            <label for="improve-videos">Video Tutorials</label>
-          </li>
-          <li>
+            <label for="improve-videos" class="item-label">Video Tutorials</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="meetups" id="improve-meetups">
-            <label for="improve-meetups">Community Meetups</label>
-          </li>
-          <li>
+            <label for="improve-meetups" class="item-label">Community Meetups</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="wiki" id="improve-wiki">
-            <label for="improve-wiki">Community Wiki</label>
-          </li>
-          <li>
+            <label for="improve-wiki" class="item-label">Community Wiki</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="forum" id="improve-forum">
-            <label for="improve-forum">Community Forum</label>
-          </li>
-          <li>
+            <label for="improve-forum" class="item-label">Community Forum</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="courses" id="improve-courses">
-            <label for="improve-courses">Additional Coursess</label>
-          </li>
-          <li>
+            <label for="improve-courses" class="item-label">Additional Coursess</label>
+          </div>
+          <div class="checkbox">
             <input type="checkbox" value="other" id="improve-other">
             <input type="text" id="improve-other-text" placeholder="Something Else">
-          </li>
-        </ul>
-      </div>
-      <div class="survey-form--field">
-        <label for="comment">Do you have any comments or suggestions?</label>
-        <textarea id="comment"></textarea>
-      </div>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Comments</legend>
+        <div class="survey-form--field">
+          <label for="comment" class="field-label">Do you have any comments or suggestions?</label>
+          <textarea rows="3" id="comment" class="survey-form--field--comments"></textarea>
+        </div>
+      </fieldset>
       <div class="survey-form--buttons">
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" id="submit" class="submit-button">Submit</button>
       </div>
     </form>
   </main>
