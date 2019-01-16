@@ -43,6 +43,11 @@ main {
   bottom: 0.1em;
 }
 
+svg.Font-Awesome-icon {
+  height: 1em;
+  vertical-align: -0.125em;
+}
+
 .header--title {
   font-size: var(--title-size);
 }
