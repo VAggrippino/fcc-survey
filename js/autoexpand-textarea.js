@@ -66,4 +66,4 @@ function autoExpand(ta) {
 }
 
 document.querySelectorAll('textarea.auto-expand')
-  .forEach((ta) => autoExpand(ta));
+    .forEach((ta) => autoExpand(ta));
